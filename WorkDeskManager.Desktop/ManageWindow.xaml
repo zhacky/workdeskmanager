@@ -1,8 +1,39 @@
 ﻿<Window x:Class="WorkDeskManager.Desktop.ManageWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ManageWindow" Height="300" Width="300">
+        Title="ManageWindow" Height="300" Width="476">
     <Grid>
-        
+        <TabControl HorizontalAlignment="Left" Height="249" Margin="10,10,0,0" VerticalAlignment="Top" Width="448">
+            <TabItem Header="Projects">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox HorizontalAlignment="Left" Height="201" Margin="10,10,0,0" VerticalAlignment="Top" Width="140"/>
+                    <Button Content="Add New" HorizontalAlignment="Left" Margin="155,10,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Save" HorizontalAlignment="Left" Margin="235,10,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="315,10,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Label Content="Name" HorizontalAlignment="Left" Margin="155,40,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="155,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="277"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Workweeks">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox HorizontalAlignment="Left" Height="201" Margin="10,10,0,0" VerticalAlignment="Top" Width="141"/>
+                    <Button Content="Add New" HorizontalAlignment="Left" Margin="156,10,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Save" HorizontalAlignment="Left" Margin="236,10,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="Delete" HorizontalAlignment="Left" Margin="316,10,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Label Content="Description" HorizontalAlignment="Left" Margin="156,35,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="156,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="401,92,0,0" VerticalAlignment="Top" Width="31"/>
+                    <Label Content="Start Date" HorizontalAlignment="Left" Margin="156,89,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="224,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Settings">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Info">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>

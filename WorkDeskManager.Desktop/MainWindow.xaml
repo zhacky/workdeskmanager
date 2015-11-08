@@ -4,13 +4,14 @@
         Title="Workdesk Manager v1.0" Height="350" Width="546" Icon="pack://siteoforigin:,,,/Resources/favicon.ico" StateChanged="Window_StateChanged" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,13,0">
         <ComboBox x:Name="TaskList" HorizontalAlignment="Left" Margin="52,26,0,0" VerticalAlignment="Top" Width="272" SelectionChanged="TaskList_SelectionChanged"/>
-        <ListBox x:Name="ActivityList" HorizontalAlignment="Left" Height="100" Margin="52,95,0,0" VerticalAlignment="Top" Width="272"/>
+        <ListBox x:Name="ActivityList" HorizontalAlignment="Left" Height="160" Margin="52,95,0,0" VerticalAlignment="Top" Width="455"/>
         <Button x:Name="btnAddNewTask" Content="Add New" HorizontalAlignment="Left" Margin="451,26,0,0" VerticalAlignment="Top" Width="56" Click="btnAddNewTask_Click" Height="22"/>
         <Button x:Name="btnEditTask" Content="Edit" HorizontalAlignment="Left" Margin="329,26,0,0" VerticalAlignment="Top" Width="56" Height="22"/>
         <Button x:Name="btnDeleteTask" Content="Delete" HorizontalAlignment="Left" Margin="390,26,0,0" VerticalAlignment="Top" Width="56" Height="22"/>
         <TextBox x:Name="txtWorksheetUrl" HorizontalAlignment="Left" Height="23" Margin="52,53,0,0" VerticalAlignment="Top" Width="272" MaxLines="1" GotFocus="txtWorksheetUrl_GotFocus" GotKeyboardFocus="txtWorksheetUrl_GotKeyboardFocus"/>
         <Label Content="Task:" HorizontalAlignment="Left" Margin="9,22,0,0" VerticalAlignment="Top"/>
         <Label Content="URL:" HorizontalAlignment="Left" Margin="9,50,0,0" VerticalAlignment="Top"/>
-        <Button Content="Manage" HorizontalAlignment="Left" Margin="52,267,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnManage" Content="Manage" HorizontalAlignment="Left" Margin="249,260,0,0" VerticalAlignment="Top" Width="75" Click="btnManage_Click"/>
+        <Button x:Name="btnTimeView" Content="View" HorizontalAlignment="Left" Margin="52,260,0,0" VerticalAlignment="Top" Width="75" Click="btnTimeView_Click"/>
     </Grid>
 </Window>

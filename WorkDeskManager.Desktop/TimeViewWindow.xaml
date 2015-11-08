@@ -1,0 +1,35 @@
+﻿<Window x:Class="WorkDeskManager.Desktop.TimeViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Time View" Height="404" Width="536">
+    <Grid>
+        <Label Content="FRI" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Height="31" Width="40"/>
+        <Label Content="MON" HorizontalAlignment="Left" Margin="21,47,0,0" VerticalAlignment="Top" Height="30" Width="40"/>
+        <Label Content="TUE" HorizontalAlignment="Left" Margin="21,83,0,0" VerticalAlignment="Top" Height="31" Width="40"/>
+        <Label Content="WED" HorizontalAlignment="Left" Margin="21,120,0,0" VerticalAlignment="Top" Height="30" Width="40"/>
+        <Label Content="THU" HorizontalAlignment="Left" Margin="21,156,0,0" VerticalAlignment="Top" Height="31" Width="40"/>
+        <ProgressBar HorizontalAlignment="Left" Height="31" Margin="66,10,0,0" VerticalAlignment="Top" Width="245" Maximum="8" SmallChange="0.25"/>
+        <ProgressBar HorizontalAlignment="Left" Height="30" Margin="66,47,0,0" VerticalAlignment="Top" Width="245" SmallChange="0.25" Maximum="8"/>
+        <ProgressBar HorizontalAlignment="Left" Height="32" Margin="66,82,0,0" VerticalAlignment="Top" Width="245" Maximum="8" SmallChange="0.25"/>
+        <ProgressBar HorizontalAlignment="Left" Height="30" Margin="66,120,0,0" VerticalAlignment="Top" Width="245" Maximum="8" SmallChange="0.25"/>
+        <ProgressBar HorizontalAlignment="Left" Height="31" Margin="66,156,0,0" VerticalAlignment="Top" Width="245" Maximum="8" SmallChange="0.25"/>
+        <Label Content="Activity" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="66,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
+        <Label Content="Hours" HorizontalAlignment="Left" Margin="316,212,0,0" VerticalAlignment="Top"/>
+        <Slider x:Name="sldrHours" HorizontalAlignment="Left" Margin="316,238,0,0" VerticalAlignment="Top" Width="202" Height="26" ValueChanged="sldrHours_ValueChanged" Maximum="4" SmallChange="0.05" IsSnapToTickEnabled="True" TickFrequency="0.25" LargeChange="0.25" TickPlacement="BottomRight"/>
+        <Label x:Name="lblHours" Content="0.00" HorizontalAlignment="Left" Margin="358,206,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lblFriHrs" Content="0.00" HorizontalAlignment="Left" Margin="316,10,0,0" VerticalAlignment="Top" Height="31" Width="42"/>
+        <Label x:Name="lblMonHrs" Content="0.00" HorizontalAlignment="Left" Margin="316,47,0,0" VerticalAlignment="Top" Height="30" Width="42"/>
+        <Label x:Name="lblTueHrs" Content="0.00" HorizontalAlignment="Left" Margin="316,83,0,0" VerticalAlignment="Top" Height="31" Width="42"/>
+        <Label x:Name="lblWedHrs" Content="0.00" HorizontalAlignment="Left" Margin="316,120,0,0" VerticalAlignment="Top" Height="30" Width="42"/>
+        <Label x:Name="lblThuHrs" Content="0.00" HorizontalAlignment="Left" Margin="316,156,0,0" VerticalAlignment="Top" Height="31" Width="42"/>
+        <Label Content="TOTAL WEEK HOURS" HorizontalAlignment="Left" Margin="381,15,0,0" VerticalAlignment="Top"/>
+        <Label Content="0.00" HorizontalAlignment="Left" Margin="358,51,0,0" VerticalAlignment="Top" Height="136" Width="160" FontSize="72" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <ComboBox HorizontalAlignment="Left" Margin="66,212,0,0" VerticalAlignment="Top" Width="210"/>
+        <Label Content="This Task" HorizontalAlignment="Left" Margin="0,212,0,0" VerticalAlignment="Top" Height="24" Width="61"/>
+        <Button Content="***" HorizontalAlignment="Left" Margin="281,212,0,0" VerticalAlignment="Top" Width="30" Height="22"/>
+        <ListBox HorizontalAlignment="Left" Height="100" Margin="66,269,0,0" VerticalAlignment="Top" Width="245"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="281,238,0,0" VerticalAlignment="Top" Width="30" Height="26" IsDefault="True"/>
+
+    </Grid>
+</Window>

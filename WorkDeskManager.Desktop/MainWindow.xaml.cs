@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using WorkDeskManager.Desktop.Data;
 
 namespace WorkDeskManager.Desktop
@@ -23,6 +24,7 @@ namespace WorkDeskManager.Desktop
     public partial class MainWindow : Window
     {
         NotifyIcon notifyIcon = new NotifyIcon();
+        TimeViewWindow timeWindow;
         public MainWindow()
         {
             InitializeComponent();
@@ -50,6 +52,10 @@ namespace WorkDeskManager.Desktop
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Tick += timer_Tick;
+            timer.Interval = new TimeSpan(0, 0, Properties.Settings.Default.IntervalSecs);
+            timer.Start();
             //TaskList.items
             using (var context = new WorkDeskManager.Desktop.Data.WorkdeskContext())
             {
@@ -61,6 +67,17 @@ namespace WorkDeskManager.Desktop
                 }
                 
             }
+        }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            if (timeWindow != null)
+            {
+                timeWindow.Close();
+            }
+            timeWindow = new TimeViewWindow();
+            timeWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            timeWindow.Show();
         }
 
         private void TaskList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -76,7 +93,7 @@ namespace WorkDeskManager.Desktop
                     {
                         ActivityList.ItemsSource = activities;
                         ActivityList.DisplayMemberPath = "Description";
-                        ActivityList.Items.Refresh();
+                       ActivityList.Items.Refresh();
                     }
                     
                     
@@ -102,6 +119,21 @@ namespace WorkDeskManager.Desktop
         {
             txtWorksheetUrl.SelectAll();
         }
+
+        private void btnManage_Click(object sender, RoutedEventArgs e)
+        {
+            var manageWindow = new ManageWindow();
+            manageWindow.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            manageWindow.ShowDialog();
+        }
+
+        private void btnTimeView_Click(object sender, RoutedEventArgs e)
+        {
+            var timeViewWindow = new TimeViewWindow();
+            timeViewWindow.Show();
+        }
+
+     
 
        
     }

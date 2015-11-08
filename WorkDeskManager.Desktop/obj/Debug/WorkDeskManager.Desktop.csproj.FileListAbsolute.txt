@@ -20,3 +20,8 @@ E:\Git\WorkDeskManager\WorkDeskManager.Desktop\obj\Debug\WorkDeskManager.Desktop
 E:\Git\WorkDeskManager\WorkDeskManager.Desktop\obj\Debug\WorkDeskManager.Desktop.csproj.GenerateResource.Cache
 E:\Git\WorkDeskManager\WorkDeskManager.Desktop\obj\Debug\WorkDeskManager.Desktop.exe
 E:\Git\WorkDeskManager\WorkDeskManager.Desktop\obj\Debug\WorkDeskManager.Desktop.pdb
+E:\Git\WorkDeskManager\WorkDeskManager.Desktop\obj\Debug\WorkDeskManager.Desktop.csprojResolveAssemblyReference.cache
+E:\Git\WorkDeskManager\WorkDeskManager.Desktop\obj\Debug\ManageWindow.baml
+E:\Git\WorkDeskManager\WorkDeskManager.Desktop\obj\Debug\ManageWindow.g.cs
+E:\Git\WorkDeskManager\WorkDeskManager.Desktop\obj\Debug\TimeViewWindow.baml
+E:\Git\WorkDeskManager\WorkDeskManager.Desktop\obj\Debug\TimeViewWindow.g.cs
