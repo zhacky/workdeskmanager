@@ -28,16 +28,20 @@ namespace WorkDeskManager.Desktop.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            context.Projects.AddOrUpdate(
-                p => p.Name,
-                new Project
+
+            //-----------populate projects--------------//
+            Project certica = new Project
                 {
                     Name = "Certica"
-                },
-                new Project
+                };
+            Project iframer = new Project
                 {
                     Name = "i-Framer"
-                },
+                };
+            context.Projects.AddOrUpdate(
+                p => p.Name,
+                certica,
+                iframer,
                 new Project
                 {
                     Name = "ZeroCommission"
@@ -47,18 +51,21 @@ namespace WorkDeskManager.Desktop.Migrations
                     Name = "HTR"
                 }
                 );
-            context.Workweeks.AddOrUpdate(
-                w => w.Description,
-                new Workweek
+
+            //---------populate workweeks--------------//
+             Workweek workweek = new Workweek
                 {
                     Description = "Nov. 6 - 12, 2015",
                     StartDate = DateTime.Parse("November 6, 2015"),
                     EndDate = DateTime.Parse("November 12, 2015")
-                }
+                };
+            context.Workweeks.AddOrUpdate(
+                w => w.Description,
+                workweek
                 );
-            context.Tasks.AddOrUpdate(
-                t => t.Name,
-                new Task
+
+            //---------populate tasks--------------//
+            Task task = new Task
                 {
                     Name = @"Investigate why FYI task is showing all teams and display 'me and my team' instead",
                     WorksheetUrl = @"http://i-possible.com.au/workflow/worksheet/3635",
@@ -67,9 +74,18 @@ namespace WorkDeskManager.Desktop.Migrations
                                           TimeSpent = 1.25 },
                         new Activity() {  Description = "Edit Tasks Page to use permissions i.e. View Other Team Tasks",
                                           TimeSpent = 1.5  }
-                    }
-                }
+
+                    },
+                    Workweek = workweek,
+                    SpentHours = (1.25 + 1.5),
+                    Project = certica
+                };
+
+            context.Tasks.AddOrUpdate(
+                t => t.Name,
+                task
                 );
+
             context.SaveChanges();
         }
     }

@@ -7,7 +7,7 @@
         <ListBox x:Name="ActivityList" HorizontalAlignment="Left" Height="160" Margin="52,95,0,0" VerticalAlignment="Top" Width="455"/>
         <Button x:Name="btnAddNewTask" Content="Add New" HorizontalAlignment="Left" Margin="451,26,0,0" VerticalAlignment="Top" Width="56" Click="btnAddNewTask_Click" Height="22"/>
         <Button x:Name="btnEditTask" Content="Edit" HorizontalAlignment="Left" Margin="329,26,0,0" VerticalAlignment="Top" Width="56" Height="22"/>
-        <Button x:Name="btnDeleteTask" Content="Delete" HorizontalAlignment="Left" Margin="390,26,0,0" VerticalAlignment="Top" Width="56" Height="22"/>
+        <Button x:Name="btnDeleteTask" Content="Delete" HorizontalAlignment="Left" Margin="390,26,0,0" VerticalAlignment="Top" Width="56" Height="22" Click="btnDeleteTask_Click"/>
         <TextBox x:Name="txtWorksheetUrl" HorizontalAlignment="Left" Height="23" Margin="52,53,0,0" VerticalAlignment="Top" Width="272" MaxLines="1" GotFocus="txtWorksheetUrl_GotFocus" GotKeyboardFocus="txtWorksheetUrl_GotKeyboardFocus"/>
         <Label Content="Task:" HorizontalAlignment="Left" Margin="9,22,0,0" VerticalAlignment="Top"/>
         <Label Content="URL:" HorizontalAlignment="Left" Margin="9,50,0,0" VerticalAlignment="Top"/>

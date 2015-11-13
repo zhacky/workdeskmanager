@@ -10,6 +10,7 @@ namespace WorkDeskManager.Desktop.Data
     {
         public int Id { get; set; }
         public string Description { get; set; }
+        public DateTime WorkDate { get; set; }
         public double TimeSpent { get; set; }
         public Task Task { get; set; }
     }

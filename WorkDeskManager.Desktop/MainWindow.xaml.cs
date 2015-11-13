@@ -133,6 +133,21 @@ namespace WorkDeskManager.Desktop
             timeViewWindow.Show();
         }
 
+        private void btnDeleteTask_Click(object sender, RoutedEventArgs e)
+        {
+            using (var context = new WorkdeskContext())
+            {
+                var task = (WorkDeskManager.Desktop.Data.Task)TaskList.SelectedItem;
+                if (null != task)
+                {
+                    context.Tasks.Attach(task);
+                context.Tasks.Remove(task);
+                context.SaveChanges();
+
+                }
+            }
+        }
+
      
 
        
